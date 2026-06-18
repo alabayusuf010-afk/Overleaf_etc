@@ -1,0 +1,22 @@
+﻿# StereoVIO point-cloud cleanup
+
+This repository contains helper scripts used to clean an outlier from a point cloud and generate report images.
+
+Files added:
+- clean_outlier.py — removes a single outlier from cloud.ply and writes cloud_clean.ply and cloud_clean.png.
+- compare_clouds.py — produces a side-by-side comparison image cloud_compare.png.
+
+Requirements (see equirements.txt): 
+umpy, matplotlib.
+
+Run locally:
+
+`powershell
+python -m pip install -r requirements.txt
+python clean_outlier.py
+python compare_clouds.py
+`
+"@ | Out-File -FilePath README.md -Encoding utf8 }
+if (-not (Test-Path requirements.txt)) { @"
+numpy
+matplotlib
